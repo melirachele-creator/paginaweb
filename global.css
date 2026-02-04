@@ -1,0 +1,32 @@
+:root {
+  --color-bg: #f5f1e9;
+  --color-red: #ee131e;
+  --color-white: #faf9f0;
+  --font-main: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  margin: 0;
+  padding: 0;
+  color: var(--color-red);
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}

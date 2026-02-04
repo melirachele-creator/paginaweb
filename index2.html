@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generated Page</title>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css">
+  <style id="sections-styles">
+/* CSS for section section:Header */
+#section-header {
+  padding-top: 0;
+}
+
+.site-header {
+  background-color: var(--color-red);
+  border-radius: 0 0 31px 31px; /* Visual adjustment for top bar */
+  height: 138px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* On desktop, maybe it's a floating pill, but y=0 implies top attachment. 
+   Figma shows radius 31px on a rectangle at 0,0. 
+   I will apply radius to all corners but since it's at top, top corners might be flush if full width.
+   However, based on the design aesthetic, it looks like a floating bar or a top tab. 
+   I'll keep the radius as specified. */
+.site-header {
+  border-radius: 31px; 
+  /* If it touches the top edge, we might want 0 on top, but let's stick to the design data */
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.brand, .author {
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: 20px; /* Estimated */
+  line-height: 1.2;
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+
+.author {
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    height: auto;
+    padding: 20px 0;
+    border-radius: 0 0 20px 20px;
+  }
+}
+
+/* CSS for section section:Hero */
+#section-hero {
+  padding: 60px 0;
+}
+
+.main-title {
+  font-family: var(--font-main);
+  font-weight: 900;
+  font-size: clamp(3rem, 9vw, 140px);
+  line-height: 0.9;
+  color: var(--color-red);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 1.2em;
+}
+
+/* CSS for section section:Cards */
+#section-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.info-card {
+  border-radius: 31px;
+  padding: 60px 40px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 50px;
+}
+
+.red-card {
+  background-color: var(--color-red);
+  color: var(--color-white);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.card-title {
+  flex: 0 0 40%;
+}
+
+.card-title h2 {
+  font-size: clamp(2rem, 4vw, 64px);
+  font-weight: 900;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.card-text {
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.card-text p {
+  margin-bottom: 20px;
+}
+
+.card-text p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .card-content {
+    flex-direction: column;
+  }
+  .card-title {
+    flex: auto;
+    margin-bottom: 20px;
+  }
+}
+
+/* CSS for section section:Impact */
+#section-impact {
+  /* The background is red, but the card inside is beige. */
+  width: 100%;
+}
+
+.impact-bg {
+  background-color: var(--color-red);
+  padding-top: 40px; /* Space for the card */
+  padding-bottom: 80px;
+  min-height: 800px;
+  display: flex;
+  flex-direction: column;
+}
+
+.beige-card {
+  background-color: var(--color-bg); /* Beige #f5f1e9 */
+  color: var(--color-red);
+  margin-bottom: 80px;
+}
+
+.impact-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: var(--color-white);
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.impact-quote {
+  font-size: clamp(1.5rem, 2.5vw, 36px);
+  line-height: 1.3;
+  font-weight: 400;
+  margin: 0 0 60px 0;
+}
+
+.star-icon {
+  width: 138px;
+  height: 139px;
+}
+
+@media (max-width: 768px) {
+  .impact-bg {
+    padding-bottom: 40px;
+  }
+  .star-icon {
+    width: 80px;
+    height: 80px;
+  }
+}
+  </style>
+  <script src="global.js" defer></script>
+</head>
+<body>
+<section id="section-header">
+  <div class="container">
+    <header class="site-header">
+      <div class="header-content">
+        <span class="brand">Web<br>Design</span>
+        <span class="author">rachele<br>meli</span>
+      </div>
+    </header>
+  </div>
+</section>
+<section id="section-hero">
+  <div class="container">
+    <h1 class="main-title">
+      IL MONDO<br>
+      DIGITALE NON<br>
+      È SOSTENIBILE
+    </h1>
+  </div>
+</section>
+<section id="section-cards">
+  <div class="container">
+    
+    <!-- Card 1 -->
+    <article class="info-card red-card">
+      <div class="card-content">
+        <div class="card-title">
+          <h2>SPERANZE <br>PER<br>IL FUTURO</h2>
+        </div>
+        <div class="card-text">
+          <p>Un giovane Bill Gates immaginava un futuro in cui un computer su ogni scrivania e la diffusione dei supporti digitali avrebbero permesso di concentrare enormi quantità di informazioni in poco spazio, riducendo l’uso della carta e l’impatto sull’ambiente. I dati, sempre più smaterializzati, avrebbero viaggiato dai microchip agli schermi di dispositivi portatili, rendendo il mondo più efficiente e sostenibile.</p>
+          <p>A distanza di quasi trent’anni, la rivoluzione digitale si è in gran parte compiuta, ma quella ecologica no. L’informazione circola velocemente e la tecnologia è ovunque, mentre la crisi climatica continua a incombere, mostrando come le promesse di una reale riduzione dell’impatto ambientale non si siano pienamente realizzate.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 2 -->
+    <article class="info-card red-card">
+      <div class="card-content">
+        <div class="card-title">
+          <h2>REALTÀ<br>DEI FATTI</h2>
+        </div>
+        <div class="card-text">
+          <p>L’evoluzione informatica ha reso l’informazione immediata e smaterializzata, ma ha un costo ambientale rilevante.<br>
+          La produzione di dispositivi elettronici richiede materiali rari e molta energia, mentre data center, server e infrastrutture digitali consumano elettricità in grandi quantità.</p>
+          <p>Streaming, gaming e algoritmi avanzati generano emissioni significative, e i rifiuti elettronici crescono rapidamente.<br>
+          Anche il mining di criptovalute contribuisce all’impatto ecologico. In sintesi, il progresso digitale ha aumentato efficienza e connettività, ma i danni all’ambiente dimostrano che la rivoluzione tecnologica da sola non è sostenibile.</p>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+<section id="section-impact">
+  <div class="impact-bg">
+    <div class="container">
+      
+      <!-- Card 3 (Beige) -->
+      <article class="info-card beige-card">
+        <div class="card-content">
+          <div class="card-title">
+            <h2>PROPOSTE PER UN FUTURO<br>SOSTENIBILE</h2>
+          </div>
+          <div class="card-text">
+            <p>Oggi aziende e progetti digitali cercano di ridurre l’impatto ambientale: data center alimentati da energie rinnovabili, dispositivi più efficienti e riciclo dei rifiuti elettronici sono i primi passi concreti.<br>
+            La tecnologia viene ripensata per ridurre consumi e emissioni, combinando innovazione e tutela dell’ambiente.</p>
+            <p>Le promesse future parlano di un digitale davvero sostenibile, dove progresso e ecosostenibilità possano coesistere, rendendo la rivoluzione informatica non solo efficiente, ma anche responsabile verso il pianeta.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Quote & Footer Elements -->
+      <div class="impact-footer">
+        <blockquote class="impact-quote">
+          “Le recenti tecnologie digitali offrono opportunità straordinarie per monitorare e proteggere l’ambiente e la salute del pianeta, ma è fondamentale che l’espansione delle tecnologie non comporti un aumento esponenziale di consumi energetici e rifiuti. Solo così la rivoluzione digitale può essere realmente parte della soluzione per la sostenibilità.”
+        </blockquote>
+        
+        <div class="star-icon">
+          <img src="images/1_10.svg" alt="Star Icon">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+</body>
+</html>
